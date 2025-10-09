@@ -32,20 +32,17 @@
     flex-shrink: 0;
   }
 
-.title a:link,
-.title a:visited,
-.title a:hover,
-.title a:active {
-  color: black;
-  text-decoration: none;
-}
-
 .title{
     font-family: 'Tiny5x3';
     font-size: 5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 3.125rem; /* 62.5% */
+}
+
+.title a {
+  color: black;
+  text-decoration: none;
 }
 
 .nav-links {
