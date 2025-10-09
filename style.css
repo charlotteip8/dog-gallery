@@ -31,13 +31,19 @@
     height: 9.625rem;
     flex-shrink: 0;
   }
+
   
-  .dog-gallery{
+.title{
     font-family: 'Tiny5x3';
     font-size: 5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 3.125rem; /* 62.5% */
+}
+
+.title a {
+  color: black;
+  text-decoration: none;
 }
 
 

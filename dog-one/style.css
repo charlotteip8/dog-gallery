@@ -13,6 +13,7 @@
   body {
     font-family: 'Arial', sans-serif;
   }
+
   
   .navbar {
     display: flex;
@@ -31,7 +32,15 @@
     flex-shrink: 0;
   }
 
-.dog-gallery{
+.title a:link,
+.title a:visited,
+.title a:hover,
+.title a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.title{
     font-family: 'Tiny5x3';
     font-size: 5rem;
     font-style: normal;
