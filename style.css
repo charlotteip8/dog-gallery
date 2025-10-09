@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Tiny5x3';
     src: url('FONT/TINY5x3-160.woff') format('woff'),
-        url('FONT/TINY5x3-160.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'PPMori';
+  src: url('FONT/PPMori-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -11,7 +17,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'PPMori', sans-serif;
   }
   
   /* Navbar */
