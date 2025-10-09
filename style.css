@@ -60,16 +60,18 @@
   
   .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
+  grid-template-columns: repeat(5, 1fr);  /* 5 images per row */
+  gap: 1.25rem 20px;                      /* row-gap and column-gap */
+  justify-content: center;
+  align-items: start;
+  padding: 10px 5rem 9.5rem;
+  margin: 0 auto;
 }
 
 .img {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 15 / 14;  /* keeps image boxes proportional */
   overflow: hidden;
-  border-radius: 8px;
 }
 
 .img img {
@@ -77,9 +79,4 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.img img:hover {
-  transform: scale(1.05);
 }
