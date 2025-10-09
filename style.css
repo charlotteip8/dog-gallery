@@ -83,12 +83,15 @@
 }
 
 .img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 15rem;
+  height: 14rem;
+  flex-shrink: 0;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  box-sizing: border-box; /* ✅ prevents overflow */
 }
+
 
 /* Actual images */
 .img img {
