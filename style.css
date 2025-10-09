@@ -56,53 +56,23 @@
     color: #a4a4a4;            
   }
 
-  /* image gallery */
-  
- /* Container for the whole grid */
-/* Figma-style outer container */
-.layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: min(90rem, 100%);         /* keeps layout responsive but caps at 90rem */
-  padding-bottom: 22.52081rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 .gallery {
-  display: inline-grid;
+  display: grid;
+  width: 80.25rem;
   height: 152.29169rem;
   row-gap: 1.25rem;
   column-gap: 20px;
   grid-template-rows: repeat(10, minmax(0, 1fr));
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+/* Grid item */
+.img {
   width: 100%;
+  height: 100%;          
+  overflow: hidden;
   box-sizing: border-box;
 }
 
-.img {
-  width: 15rem;
-  height: 14rem;
-  flex-shrink: 0;
-  overflow: hidden;
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-  box-sizing: border-box; /* ✅ prevents overflow */
-}
 
-
-/* Actual images */
-.img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.img:hover img {
-  transform: scale(1.05);
-}
 
