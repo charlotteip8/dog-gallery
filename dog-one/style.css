@@ -26,10 +26,17 @@
     width: 100%;
     z-index: 1000; 
     backdrop-filter: blur(8px);
+    width: 90rem;
+    height: 9.625rem;
+    flex-shrink: 0;
   }
 
 .dog-gallery{
-    font-family:  font-family: 'Tiny5x3';
+    font-family: 'Tiny5x3';
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.125rem; /* 62.5% */
 }
 
 
