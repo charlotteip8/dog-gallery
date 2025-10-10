@@ -58,6 +58,7 @@
 }
   
 .nav-links li a {
+    font-family: 'PPMori',sans-serif;
     text-decoration: none;
     color: black;
     padding: 8px 12px;
