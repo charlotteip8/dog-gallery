@@ -88,18 +88,25 @@
   text-align: left;       /* left align text inside h2 and p */
 }
 
-h2, p {
+h2{
+  font-family: 'PPMori', sans-serif;
+  width: 100%;           
+  margin-top: 1rem;
+  font-size: 20px;
+}
+
+p{
   font-family: 'PPMori', sans-serif;
   width: 100%;            /* makes text alignment apply properly */
   margin-top: 1rem;
-  margin-left: 10rem;
 }
 
 .image {
   width: 35rem;
   height: 25rem;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 12px;               /* space between image and text */
+  border-radius: 5px;
 }
 
 
