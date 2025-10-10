@@ -18,6 +18,9 @@
   
   body {
     font-family: 'PPMori', sans-serif;
+    text-align: center;
+    justify-content: center;
+    line-height: 2rem;
   }
   
   /* Navbar */
