@@ -51,6 +51,11 @@
   text-decoration: none;
 }
 
+.title:hover{
+  transform: scale(1); 
+}
+
+
 .nav-links {
     list-style: none;
     display: flex;
