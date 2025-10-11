@@ -105,10 +105,14 @@ p{
   margin-top: 1rem;
 }
 
+.one{
+  border-radius: 5px;
+}
+
 .image {
   width: 35rem;
   height: 25rem;
-  object-fit: fill;
+  object-fit: cover;
   margin-bottom: 12px;               /* space between image and text */
   border-radius: 5px;
 }
