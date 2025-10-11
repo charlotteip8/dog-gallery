@@ -85,7 +85,7 @@
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* responsive grid */
   gap: 50px; /* uniform spacing for rows & columns */
   justify-content: center;
-  padding: 30px;
+  padding: 25px;
   margin: 20px;
 }
 
@@ -94,7 +94,7 @@
   width: 100%;
   aspect-ratio: 3 / 2.5; /* keeps consistent proportions like 1rem : 1.5rem */
   overflow: hidden;
-  border-radius: 10px; /* optional: smooth corners */
+  border-radius: 10px; 
   position: relative;
 }
 
