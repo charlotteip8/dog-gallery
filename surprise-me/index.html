@@ -34,61 +34,67 @@
       color: #000;
     }
 
-    /* Navbar */
-    .navbar{
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+.navbar {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-      background-color: rgba(255, 253, 246, 0.7);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(255, 253, 246, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-      padding: 20px 5rem;
-      height: 5rem;
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
+  padding: 20px 5rem;
+  height: 5rem;
+}
 
-    .title{
-      font-family: 'Tiny5x3', sans-serif;
-      font-size: clamp(2.2rem, 6vw, 5rem);
-      font-weight: 400;
-      line-height: 1;
-      transform-origin: left center;
-      transition: transform .2s ease;
-      margin: 0;
-    }
-    .title a{
-      color: #000;
-      text-decoration: none;
-    }
-    .title:hover{ transform: scale(1.06); }
+.title {
+  font-family: 'Tiny5x3', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1;
+  transform-origin: left center;
+  transition: transform .2s ease;
+  margin: 0;
+}
 
-    .nav-links{
-      list-style: none;
-      display: flex;
-      gap: 60px;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links a{
-      font-family: 'PPMori', sans-serif;
-      text-decoration: none;
-      color: #000;
-      padding: 8px 12px;
-      font-size: 16px;
-      display: inline-block;
-      transition: transform .2s ease, color .2s ease;
-    }
-    .nav-links a:hover{
-      transform: scale(1.1);
-      color: #a4a4a4;
-    }
+.title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.title:hover {
+  transform: scale(1.06);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  font-family: 'PPMori', sans-serif;
+  text-decoration: none;
+  color: #000;
+  padding: 8px 12px;
+  font-size: 16px;
+  display: inline-block;
+  transition: transform .2s ease, color .2s ease;
+}
+
+.nav-links li a:hover {
+  transform: scale(1.1);
+  color: #a4a4a4;
+}
+
 
     /* Main layout */
     .page {
@@ -165,7 +171,7 @@
     <ul class="nav-links">
       <li><a href="#about">ABOUT</a></li>
       <li><a href="#collection">COLLECTION</a></li>
-      <li><a href="#timeline">TIMELINE</a></li>
+    <li><a href="https://charlotteip8.github.io/dog-gallery/surprise-me">SURPRISE ME</a></li>
     </ul>
   </nav>
 
