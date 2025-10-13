@@ -1,0 +1,209 @@
+ <!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  Your link to the stylesheet goes here -->
+  <link rel="icon" type="image" href="favicon.png">
+  <title>surprise me</title>
+  </head>
+
+<body style="background-color:#fffdf6;"></body>
+
+<nav class="navbar">
+  <div class="title">
+  <a href="https://charlotteip8.github.io/dog-gallery/"> DOG GALLERY</a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#collection">COLLECTION</a></li>
+    <li><a href="#timeline">TIMELINE</a></li>
+  </ul>
+</nav>
+
+  <style>
+@font-face {
+    font-family: 'Tiny5x3';
+    src: url('FONT/TINY5x3-160.woff') format('woff'),
+        url('FONT/TINY5x3-160.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'PPMori';
+  src: url('FONT/PPMori-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ *{
+    margin-top: 1rem;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+
+/* Navbar */
+.navbar{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  /* look & feel */
+  background-color: rgba(255, 253, 246, 0.7); /* translucent cream */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* spacing */
+  padding: 20px 5rem;
+  height: 5rem;
+}
+
+/* Title */
+.title{
+  font-family: 'Tiny5x3', sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1;           /* keep it tight so it fits the bar */
+  transform-origin: left center;
+  transition: transform .2s ease;
+}
+.title a{
+  color: #000;
+  text-decoration: none;
+}
+.title:hover{ transform: scale(1.06); }
+
+/* Links */
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a{
+  font-family: 'PPMori', sans-serif;
+  text-decoration: none;
+  color: #000;
+  padding: 8px 12px;
+  font-size: 16px;
+  display: inline-block;
+  transition: transform .2s ease, color .2s ease;
+}
+.nav-links li a:hover{
+  transform: scale(1.1);
+  color: #a4a4a4;
+}
+    body {
+      font-family: 'PPMori', Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 { 
+        color: #333; 
+        font-family: 'Tiny5x3', sans-serif;
+        font-size: 6rem;
+    }
+    img {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin: 20px 0;
+      transition: transform 0.3s;
+      max-height: 300px;
+      object-fit: contain;
+    }
+    img:hover { transform: scale(1.02); }
+    button {
+      color: rgb(123, 123, 123);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover { 
+        background-color: #1d6fe8; 
+        color:white}
+    
+    
+  </style>
+</head>
+
+<body>
+  <h1>🐕 Surprise Me!</h1>
+  <img id="dogImage" src="/surprise-me/images/98.jpg" alt="Random Dog">
+  <br>
+  <br>
+  <button id="newDog">show me a dog</button>
+
+<script>
+  // Folder structure: images/surprise-me/1.jpeg ... 100.webp etc.
+  // If your folder is different, change BASE accordingly.
+  const BASE = "images";
+  const MAX_IMAGES = 100;
+  const EXTS = ["jpeg", "jpg", "png", "webp", "gif"];
+
+  const imgEl = document.getElementById("dogImage");
+  const btn = document.getElementById("newDog");
+
+  function randIndex() {
+    return Math.floor(Math.random() * MAX_IMAGES) + 1; // 1..MAX_IMAGES
+  }
+
+  function pathFor(n, ext) {
+    return `${BASE}/${n}.${ext}`;
+  }
+
+  // Try to load n with exts[extIndex]; if it fails, try next extension.
+  // If all extensions fail for that number, pick a new number and try again.
+  function tryImage(n, extIndex = 0, attempts = 0) {
+    const MAX_ATTEMPTS = MAX_IMAGES * EXTS.length; // safety to avoid infinite loop
+    if (attempts > MAX_ATTEMPTS) {
+      console.warn("Tried many possibilities, none found.");
+      return;
+    }
+
+    const url = pathFor(n, EXTS[extIndex]);
+
+    imgEl.onerror = () => {
+      // Try next extension for same number
+      if (extIndex + 1 < EXTS.length) {
+        tryImage(n, extIndex + 1, attempts + 1);
+      } else {
+        // All extensions for this number failed; try a different number
+        tryImage(randIndex(), 0, attempts + 1);
+      }
+    };
+
+    imgEl.onload = () => {
+      // Clear error handler after a successful load
+      imgEl.onerror = null;
+    };
+
+    imgEl.src = url;
+  }
+
+  function showRandomDog() {
+    tryImage(randIndex(), 0, 0);
+  }
+
+  // Button click
+  btn.addEventListener("click", showRandomDog);
+</script>
+</body>
+</html>
