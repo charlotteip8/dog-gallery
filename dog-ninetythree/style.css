@@ -18,7 +18,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'PPMori','Arial', sans-serif;
   }
 
 .navbar {
@@ -109,7 +109,7 @@ p{
 }
 
 .image {
-  width: 15rem;
+  width: 20rem;
   height: 100%;
   object-fit:contain;
   margin-bottom: 12px;              

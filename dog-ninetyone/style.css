@@ -18,7 +18,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'PPMori','Arial', sans-serif;
   }
 
 .navbar {
@@ -103,13 +103,13 @@ h2{
 
 p{
   font-family: 'PPMori', sans-serif;
-  width: 100%;            /* makes text alignment apply properly */
+  width: 20rem;            /* makes text alignment apply properly */
   margin-top: 1rem;
-  line-height: 8px;
+  line-height: 20px;
 }
 
 .image {
-  width: 30rem;
+  width: 20rem;
   height: 100%;
   object-fit:contain;
   margin-bottom: 12px;              
@@ -152,7 +152,6 @@ p{
 .down:hover{
   transform: scale(1); 
 }
-
 
 
 
