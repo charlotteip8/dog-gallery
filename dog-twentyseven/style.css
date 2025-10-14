@@ -103,6 +103,7 @@ p{
   font-family: 'PPMori', sans-serif;
   width: 100%;            /* makes text alignment apply properly */
   margin-top: 1rem;
+      line-height: 8px;
 }
 
 .one{
