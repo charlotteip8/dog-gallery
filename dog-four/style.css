@@ -108,7 +108,7 @@ p{
 }
 
 .image {
-  width: 20rem;
+  width: 23rem;
   height: 100%;
   object-fit:contain;
   margin-bottom: 12px;               /* space between image and text */
