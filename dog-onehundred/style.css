@@ -84,6 +84,7 @@
   justify-content: center;       
   width: min(1100px, 92vw);
   margin: 24px auto 80px;
+  align-content: end;
 }
 
 .one {
@@ -108,10 +109,10 @@ p{
 }
 
 .image {
-  width: 35rem;
-  height: 25rem;
-  object-fit: contain;
-  margin-bottom: 12px;               /* space between image and text */
+  width: 23rem;
+  height: 100%;
+  object-fit:contain;
+  margin-bottom: 12px;              
   border-radius: 5px;
 }
 

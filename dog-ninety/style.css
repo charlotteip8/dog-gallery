@@ -108,12 +108,13 @@ p{
 }
 
 .image {
-  width: 35rem;
-  height: 25rem;
-  object-fit: contain;
-  margin-bottom: 12px;               /* space between image and text */
+  width: 23rem;
+  height: 100%;
+  object-fit:contain;
+  margin-bottom: 12px;              
   border-radius: 5px;
 }
+
 
 .up{
   position: absolute;
