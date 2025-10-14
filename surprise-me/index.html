@@ -34,33 +34,33 @@
     }
 
 
-.navbar {
-  position: fixed;
-  top: 2rem;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2rem;
+    color: black;
 
-  background-color: rgba(255, 253, 246, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    backdrop-filter: blur(8px);
+    background: #ffffff99;
+    width: 90rem;
+    height: 9rem;
+    flex-shrink: 0;
+    backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #ffffff99, transparent);
+  }
 
-  padding: 20px 5rem;
-  height: 5rem;
-}
-
-.title {
-  font-family: 'Tiny5x3', sans-serif;
-  font-size: 5rem;
-  font-weight: 400;
-  line-height: 1;
-  transform-origin: left center;
-  transition: transform .2s ease;
-  margin: 0;
+.title{
+    font-family: 'Tiny5x3';
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.125rem; /* 62.5% */
 }
 
 .title a {
@@ -100,12 +100,12 @@
     .page {
       /* space so content starts below the fixed navbar */
       padding-top: 5rem;
-      min-height: 100vh;
+      min-height: 50vh;
 
       /* center the hero area */
       display: grid;
-      place-items: center;
       padding-inline: 1rem;
+      overflow: hidden;
     }
 
     .hero {
@@ -114,7 +114,8 @@
       align-items: center;
       gap: 1rem;
       text-align: center;
-      margin-top: 2rem;
+      margin-top: -5rem;
+      overflow: hidden;
     }
 
     h1 {
