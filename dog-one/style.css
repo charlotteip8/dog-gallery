@@ -21,23 +21,39 @@
     font-family: 'Arial', sans-serif;
   }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5rem;
-  background-color: rgba(255, 253, 246, 0.7);
-  color: black;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000; 
-  backdrop-filter: blur(8px);
-  width: 90rem;
-  height: 9.625rem;
-  flex-shrink: 0;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2rem;
+    color: black;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    backdrop-filter: blur(8px);
+    background: #ffffff99;
+    width: 90rem;
+    height: 9rem;
+    flex-shrink: 0;
+    backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #ffffff99, transparent);
   }
 
+
+  nav::after {
+  position: absolute;
+  bottom: -20px;       /* adjust how far the blur extends */
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+  
 .title{
     font-family: 'Tiny5x3';
     font-size: 5rem;
@@ -56,24 +72,24 @@
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 60px;
+  list-style: none;
+  display: flex;
+  gap: 60px;
 }
   
 .nav-links li a {
-    font-family: 'PPMori',sans-serif;
-    text-decoration: none;
-    color: black;
-    padding: 8px 12px;
-    font-size: 16px;
-    transition: transform 0.3s ease, color 0.3s ease;
-    display: inline-block; 
+  text-decoration: none;
+  font-family: 'PPMori',sans-serif;
+  color: black;
+  padding: 8px 12px;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block; 
 }
 
 .nav-links li a:hover {
-    transform: scale(1.1);       
-    color: #a4a4a4;            
+  transform: scale(1.1);       
+  color: #a4a4a4;            
 }
 
 /*image style*/
