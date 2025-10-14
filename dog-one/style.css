@@ -15,7 +15,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
   }
   
   body {
@@ -43,18 +42,6 @@
     background-image: linear-gradient(to bottom, #ffffff99, transparent);
   }
 
-
-  nav::after {
-  position: absolute;
-  bottom: -20px;       /* adjust how far the blur extends */
-  left: 0;
-  width: 100%;
-  backdrop-filter: blur(12px);
-  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-}
-
-  
 .title{
     font-family: 'Tiny5x3';
     font-size: 5rem;
@@ -68,43 +55,56 @@
   text-decoration: none;
 }
 
-.title:hover {
-  transform: scale(1.1);  
+.title:hover{
+  transform: scale(1.1); 
 }
 
+
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 60px;
+    list-style: none;
+    display: flex;
+    gap: 60px;
 }
   
 .nav-links li a {
-  text-decoration: none;
-  font-family: 'PPMori',sans-serif;
-  color: black;
-  padding: 8px 12px;
-  font-size: 16px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block; 
+    font-family: 'PPMori',sans-serif;
+    text-decoration: none;
+    color: black;
+    padding: 8px 12px;
+    font-size: 16px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; 
 }
 
 .nav-links li a:hover {
-  transform: scale(1.1);       
-  color: #a4a4a4;            
+    transform: scale(1.1);       
+    color: #a4a4a4;            
 }
 
 /*image style*/
 
 .container {
-  display: flex;                 
+  display: flex;        
+  flex-direction: column;         
   justify-content: center;       
   width: min(1100px, 92vw);
   margin: 24px auto 80px;
+  height: 50vh;
+}
+
+.hero{
+  display: flex;
+  flex-direction: row;   
+  column-gap: 50px;
+  text-align: left;      
+  align-items: center;
+  justify-content: center;
 }
 
 .one {
   display: flex;
-  flex-direction: column;    
+  flex-direction: row;   
+  column-gap: 20px;
   text-align: left;      
   align-items: flex-start;
   justify-content: flex-start;
@@ -121,7 +121,7 @@ p{
   font-family: 'PPMori', sans-serif;
   width: 100%;            /* makes text alignment apply properly */
   margin-top: 1rem;
-  line-height: 8px;
+  line-height: 20px;
 }
 
 .image {
@@ -132,25 +132,37 @@ p{
   border-radius: 5px;
 }
 
-.paw {
+
+.up{
   position: absolute;
-  /* position next to the right edge of the image */
-  top: 50%;
-  right: 10rem;                /* nudges it outside the image edge */
-  transform: translateY(-50%);
+  top: 80%;
+  left: 40rem;               
+  transform: translateX(20%);
   width: 44px;
   height: 44px;
 
-  opacity: 0.6;
   cursor: pointer;
   transition: opacity 0.25s, transform 0.25s;
   z-index: 2;
 }
 
-.paw:hover{
-  transform: scale(1); 
+.up:hover{
+  transform: scale(1.1); 
 }
 
+.down {
+  position: absolute;
+  top: 80%;
+  right: 40rem;               
+  transform: translateX(-20%);
+  width: 44px;
+  height: 44px;
 
+  cursor: pointer;
+  transition: opacity 0.25s, transform 0.25s;
+  z-index: 2;
+}
 
-
+.down:hover{
+  transform: scale(1); 
+}
