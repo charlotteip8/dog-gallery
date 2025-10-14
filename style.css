@@ -41,12 +41,11 @@
     width: 90rem;
     height: 9.625rem;
     flex-shrink: 0;
-  backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
-  z-index: 100;
+    backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
+    z-index: 100;
   }
 
   nav::after {
-  content: "";
   position: absolute;
   bottom: -20px;       /* adjust how far the blur extends */
   left: 0;
