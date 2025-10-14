@@ -20,7 +20,7 @@
   body {
     font-family: 'Arial', sans-serif;
   }
-  
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -91,9 +91,10 @@
 
 .one {
   display: flex;
-  flex-direction: column;
-  align-items: center;     
+  flex-direction: column;    
   text-align: left;      
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 h2{
@@ -107,16 +108,17 @@ p{
   font-family: 'PPMori', sans-serif;
   width: 100%;            /* makes text alignment apply properly */
   margin-top: 1rem;
-      line-height: 8px;
+  line-height: 8px;
 }
 
 .image {
-  width: 35rem;
-  height: 25rem;
-  object-fit: fill;
-  margin-bottom: 12px;               /* space between image and text */
+  width: 30rem;
+  height: 100%;
+  object-fit:contain;
+  margin-bottom: 12px;              
   border-radius: 5px;
 }
+
 
 .up{
   position: absolute;
