@@ -125,11 +125,15 @@ p{
 }
 
 .image {
-  width: 30rem;
+  width: 20rem;
   height: 100%;
   object-fit:contain;
   margin-bottom: 12px;              
   border-radius: 5px;
+}
+
+.text{
+  width: 20rem;
 }
 
 
