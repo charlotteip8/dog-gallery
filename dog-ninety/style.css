@@ -125,15 +125,11 @@ p{
 }
 
 .image {
-  width: 20rem;
+  width: 30rem;
   height: 100%;
   object-fit:contain;
   margin-bottom: 12px;              
   border-radius: 5px;
-}
-
-.text{
-  width: 20rem;
 }
 
 
@@ -170,6 +166,3 @@ p{
 .down:hover{
   transform: scale(1); 
 }
-
-
-
