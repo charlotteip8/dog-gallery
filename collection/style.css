@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Tiny5x3';
+    src: url('FONT/TINY5x3-160.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'PPMori';
+  src: url('FONT/PPMori-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+  body {
+    font-family: 'PPMori', sans-serif;
+    text-align: left;
+    justify-content: left;
+    line-height: 2rem;
+    overflow-x: hidden; 
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2rem;
+    padding-bottom: 0px;
+    color: black;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    backdrop-filter: blur(8px);
+    background: #ffffff99;
+    width: 90rem;
+    height: 6rem;
+    flex-shrink: 0;
+    backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #ffffff99, transparent);
+  }
+
+
+  nav::after {
+  position: absolute;
+  bottom: -20px;       /* adjust how far the blur extends */
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.title{
+    font-family: 'Tiny5x3';
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.125rem; /* 62.5% */
+}
+
+.title a {
+  color: black;
+  text-decoration: none;
+}
+
+.title:hover {
+  transform: scale(1.1);  
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+}
+  
+.nav-links li a {
+  text-decoration: none;
+  font-family: 'PPMori',sans-serif;
+  color: black;
+  padding: 8px 12px;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block; 
+}
+
+.nav-links li a:hover {
+  transform: scale(1.1);       
+  color: #a4a4a4;            
+}
+
+.motion{
+  display: flex;
+  height: 82vh; 
+  width: fit-content;
+  object-fit: contain;
+  margin-left: 120px;
+  justify-items: center;     
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(10rem, 1fr)); /* responsive grid */
+  gap: 15px; /* uniform spacing for rows & columns */
+  justify-content: center;
+  padding: 20px;
+  margin: 15px;
+}
+
+.caption{
+  grid-column: span 5;
+}
+
+/* Image wrapper (each box) */
+.img-box {
+  width: 25%;
+  aspect-ratio: 2.5 / 2; /* keeps consistent proportions like 1rem : 1.5rem */
+  overflow: hidden;
+  border-radius: 5px; 
+  position: relative;
+}
+
+/* Image styles */
+.img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* fills box without distortion */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover zoom effect */
+.img img:hover {
+  transform: scale(1.05);
+}

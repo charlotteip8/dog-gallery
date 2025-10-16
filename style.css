@@ -15,7 +15,9 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+
+
   body {
     font-family: 'PPMori', sans-serif;
     text-align: left;
@@ -30,6 +32,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 2rem;
+    padding-bottom: 0px;
     color: black;
 
     position: sticky;
@@ -39,7 +42,7 @@
     backdrop-filter: blur(8px);
     background: #ffffff99;
     width: 90rem;
-    height: 9rem;
+    height: 6rem;
     flex-shrink: 0;
     backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
     z-index: 100;
@@ -57,7 +60,6 @@
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
-  
 .title{
     font-family: 'Tiny5x3';
     font-size: 5rem;
@@ -94,6 +96,15 @@
 .nav-links li a:hover {
   transform: scale(1.1);       
   color: #a4a4a4;            
+}
+
+.motion{
+  display: flex;
+  height: 82vh; 
+  width: fit-content;
+  object-fit: contain;
+  margin-left: 120px;
+  justify-items: center;     
 }
 
 .container {
