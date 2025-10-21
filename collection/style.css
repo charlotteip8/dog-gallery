@@ -16,8 +16,6 @@
     box-sizing: border-box;
   }
 
-
-
   body {
     font-family: 'PPMori', sans-serif;
     text-align: left;
@@ -107,6 +105,24 @@
   justify-items: center;     
 }
 
+.filter{
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  padding: 2rem;
+}
+
+.period, .origin, .medium{
+  background-image: url("foil.png");
+  background-size: cover;
+  width:200px;
+  height:35px;
+  color:white;
+  text-align: center;
+  text-justify: center;
+  border-radius: 20px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(5, minmax(10rem, 1fr)); /* responsive grid */
@@ -119,7 +135,6 @@
 .caption{
   grid-column: span 5;
 }
-
 /* Image wrapper (each box) */
 .img-box {
   width: 25%;
