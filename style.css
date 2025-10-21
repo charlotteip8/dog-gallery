@@ -105,6 +105,37 @@
   justify-items: center;     
 }
 
+.opener{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+}
+
+.silverdog{
+  width: 40%;
+  height: 40%;
+}
+
+.header{
+  width:30%;
+  height: 30%;
+}
+
+.scrolldown{
+    display: flex;
+  flex-direction: row;
+ justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+}
+
+.arrow{
+  display: flex;
+  width:10%;
+  justify-content: center;  /* centers horizontally */
+    align-items: center;      /* centers vertically */
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(5, minmax(10rem, 1fr)); /* responsive grid */
