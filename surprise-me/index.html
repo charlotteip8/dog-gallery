@@ -24,15 +24,37 @@
       font-display: swap;
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin-left: 30;
-      background-color: #fffdf6;
-      font-family: 'PPMori', Arial, sans-serif;
-      color: #000;
-    }
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* layout + typography */
+  font-family: 'PPMori', Arial, sans-serif;
+  color: #000;
+  overflow: hidden;
+
+  /* background */
+  background-image: url('fur.jpeg');
+  background-size: cover;          /* fills entire screen, maintains aspect ratio */
+  background-repeat: no-repeat;    /* no tiling */
+  background-position: center;     /* center image */
+  background-attachment: fixed;    /* optional: keeps image fixed when scrolling */
+}
+
+
+/* optional: ensure all content stays above overlay */
+body * {
+  position: relative;
+  z-index: 1;
+}
 
   .navbar {
     display: flex;
@@ -48,7 +70,7 @@
     backdrop-filter: blur(8px);
     background: #ffffff99;
     width: 90rem;
-    height: 9rem;
+    height: 8rem;
     flex-shrink: 0;
     backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
     z-index: 100;
@@ -99,7 +121,7 @@
     /* Main layout */
     .page {
       /* space so content starts below the fixed navbar */
-      padding-top: 5rem;
+      padding-top: 10rem;
       min-height: 50vh;
 
       /* center the hero area */
@@ -138,8 +160,9 @@
     #dogImage:hover { transform: scale(1.02); }
 
     button {
+      margin-top: 1rem;
       color: rgb(123, 123, 123);
-      background: transparent;
+      background-color: #fffcee;
       border: 1px solid rgba(0,0,0,0.15);
       padding: 10px 20px;
       border-radius: 6px;
@@ -150,7 +173,7 @@
     }
     button:hover {
       background-color: #fbf5d8;
-      color: #000;
+      color: #323232;
     }
     button:active { transform: translateY(1px); }
   </style>
