@@ -110,6 +110,7 @@
   flex-direction: row;
   column-gap: 50px;
   padding: 2rem;
+  align-items: center;
 }
 
 .period, .origin, .medium{
@@ -122,6 +123,7 @@
   text-justify: center;
   border-radius: 20px;
   text-decoration: none;
+  text-align: center;
 }
 
 .period a, .origin a, .medium a {
@@ -147,6 +149,36 @@
 
 
 .medium:hover{
+  transform: scale(1.05);
+}
+
+.category{
+  display: flex;
+  width:100px;
+  height:35px;
+  color:black;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: none;
+  line-height: 15px;
+  align-items: center;
+}
+
+.category a{
+  color: slategrey;
+  text-decoration: none;
+  font-size: 15px;
+  width: 100px;
+  align-items: center;
+  text-align: center;
+}
+
+.category a:visited{
+  color: slategrey;
+  text-decoration: none;
+}
+
+.category:hover{
   transform: scale(1.05);
 }
 
