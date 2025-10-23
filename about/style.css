@@ -35,7 +35,7 @@
     backdrop-filter: blur(8px);
     background: #ffffff99;
     width: 90rem;
-    height: 9rem;
+    height: 8rem;
     flex-shrink: 0;
     backdrop-filter: blur(8px); /* optional: adds a nice frosted effect */
     z-index: 100;
@@ -92,8 +92,6 @@ p{
   font-size: 12px;
 }
 
-
-/* your positioning */
 .container {
   position: relative;
   width: 80vw;
@@ -101,10 +99,10 @@ p{
 }
 .container div { position: absolute; }
 
-.one   { top: 30%; right: 30%; width: 90%;  --img: url('1.png'); --ratio: 1.8; }
-.two   { bottom: 10%;  right: 15%; width: 70%;  --img: url('2.png'); --ratio: 1.5; }
-.three { top: 40%; left: 35%; width: 100%;  --img: url('3.png'); --ratio: 2.2; }
-.four  { bottom: 18%; left: 60%; width: 70%; --img: url('4.png'); --ratio: 1.4; }
+.one   { top: 10%; right: 10%; width: 120%;  --img: url('1.png'); --ratio: 1.8; }
+.two   { bottom: 26%;  right: 18%; width: 70%;  --img: url('2.png'); --ratio: 1.5; }
+.three { top: 18%; left: 20%; width: 120%;  --img: url('3.png'); --ratio: 2.2; }
+.four  { bottom: 30%; left: 60%; width: 70%; --img: url('4.png'); --ratio: 1.4; }
 
 /* generic dog block: shows image + clips contents to the shape */
 .dog {
@@ -138,7 +136,7 @@ p{
 }
 
 .dog:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /* optional: make long copy scroll if needed rather than overflow out */
